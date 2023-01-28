@@ -3,6 +3,7 @@
   "displayName": "Roots Blade Syntax",
   "description": "Roots specific syntax highlighting for blade template files",
   "private": true,
+  "publisher": "kellymears",
   "repository": {
     "type": "git",
     "url": "https://github.com/roots/vsce-blade-syntax.git"

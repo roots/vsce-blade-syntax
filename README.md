@@ -6,6 +6,8 @@
 
 ---
 
+Extension is [pre-release but available here](https://marketplace.visualstudio.com/items?itemName=kellymears.roots-blade-syntax).
+
 ## Contributing
 
 Contributions are welcome from everyone.

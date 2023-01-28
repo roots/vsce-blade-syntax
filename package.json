@@ -1,0 +1,30 @@
+{
+  "name": "roots-blade-syntax",
+  "displayName": "Roots Blade Syntax",
+  "description": "Roots specific syntax highlighting for blade template files",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roots/vsce-blade-syntax.git"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "license": "MIT",
+  "icon": "icon.png",
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "budjs.blade.injection",
+        "path": "./syntaxes/bud.injection.json",
+        "injectTo": [
+          "text.html.php.blade"
+        ]
+      }
+    ]
+  }
+}

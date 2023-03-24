@@ -5,16 +5,31 @@
   "name": "bud.js",
   "patterns": [
     {
-      "begin": "@js",
+      "begin": "(@module)\\((\"|')(js)(\"|')\\)",
       "beginCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
+        },
+        "1": {
+          "name": "begin.bracket.round.blade.php"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.php"
+        },
+        "3": {
+          "name": "string.quoted.single.php"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.php"
+        },
+        "5": {
+          "name": "end.bracket.round.blade.php"
         }
       },
-      "end": "@endjs",
+      "end": "@endmodule",
       "endCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
         }
       },
       "contentName": "source.js",
@@ -25,16 +40,66 @@
       ]
     },
     {
-      "begin": "@css",
+      "begin": "(@module)\\((\"|')(ts)(\"|')\\)",
       "beginCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
+        },
+        "1": {
+          "name": "begin.bracket.round.blade.php"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.php"
+        },
+        "3": {
+          "name": "string.quoted.single.php"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.php"
+        },
+        "5": {
+          "name": "end.bracket.round.blade.php"
         }
       },
-      "end": "@endcss",
+      "end": "@endmodule",
       "endCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
+        }
+      },
+      "contentName": "source.ts",
+      "patterns": [
+        {
+          "include": "source.ts"
+        }
+      ]
+    },
+    {
+      "begin": "(@module)\\((\"|')(css)(\"|')\\)",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.blade"
+        },
+        "1": {
+          "name": "begin.bracket.round.blade.php"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.php"
+        },
+        "3": {
+          "name": "string.quoted.single.php"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.php"
+        },
+        "5": {
+          "name": "end.bracket.round.blade.php"
+        }
+      },
+      "end": "@endmodule",
+      "endCaptures": {
+        "0": {
+          "name": "keyword.blade"
         }
       },
       "contentName": "source.css",
@@ -45,44 +110,62 @@
       ]
     },
     {
-      "begin": "@vue",
+      "begin": "(@module)\\((\"|')(scss)(\"|')\\)",
       "beginCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
+        },
+        "1": {
+          "name": "begin.bracket.round.blade.php"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.php"
+        },
+        "3": {
+          "name": "string.quoted.single.php"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.php"
+        },
+        "5": {
+          "name": "end.bracket.round.blade.php"
         }
       },
-      "end": "@endvue",
+      "end": "@endmodule",
       "endCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
         }
       },
-      "contentName": "source.vue",
+      "contentName": "source.css.scss",
       "patterns": [
         {
-          "include": "source.vue"
+          "include": "source.css.scss"
         }
       ]
     },
     {
-      "begin": "@ts",
+      "begin": "(@asset)\\((\"|')(.*)(\"|')\\)",
       "beginCaptures": {
         "0": {
-          "name": "entity.other.attribute-name"
+          "name": "keyword.blade"
+        },
+        "1": {
+          "name": "begin.bracket.round.blade.php"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.php"
+        },
+        "3": {
+          "name": "string.quoted.single.php"
+        },
+        "4": {
+          "name": "punctuation.definition.string.end.php"
+        },
+        "5": {
+          "name": "end.bracket.round.blade.php"
         }
-      },
-      "end": "@endts",
-      "endCaptures": {
-        "0": {
-          "name": "entity.other.attribute-name"
-        }
-      },
-      "contentName": "source.ts",
-      "patterns": [
-        {
-          "include": "source.ts"
-        }
-      ]
+      }
     }
   ]
 }
